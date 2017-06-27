@@ -48,6 +48,7 @@ message(STATUS "cxx compiler: ${CMAKE_CXX_COMPILER_ID}")
 message(STATUS "cxx flags:       ${CMAKE_CXX_FLAGS}")
 message(STATUS "cxx link flags:  ${CMAKE_CXX_LINK_FLAGS}")
 message(STATUS "build shared libs: ${BUILD_SHARED_LIBS}")
-
-add_subdirectory(src)
+add_definitions(-DZ_PREFIX -DMY_ZCALLOC)
+add_subdirectory(sdk/zlib)
+add_subdirectory(sdk)
 
